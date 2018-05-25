@@ -1,7 +1,7 @@
-package com.guomiaomiao.service.impl;
+package com.guomiaomiao.learning.service.impl;
 
-import com.guomiaomiao.pojo.User;
-import com.guomiaomiao.service.IUserService;
+import com.guomiaomiao.learning.pojo.User;
+import com.guomiaomiao.learning.service.IUserService;
 import org.springframework.stereotype.Component;
 
 /**

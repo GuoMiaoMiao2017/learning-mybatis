@@ -1,7 +1,6 @@
-package com.guomiaomiao.dao;
+package com.guomiaomiao.learning.dao;
 
-import com.guomiaomiao.pojo.User;
-import org.apache.ibatis.annotations.Param;
+import com.guomiaomiao.learning.pojo.User;
 
 import java.util.List;
 

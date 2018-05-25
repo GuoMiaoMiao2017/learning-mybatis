@@ -12,7 +12,7 @@
     <!--别名定义-->
     <!--<typeAliases>-->
     <!--针对单个别名定义-->
-        <!--<typeAlias type="com.guomiaomiao.pojo.User" alias="user"/>-->
+        <!--<typeAlias type="User" alias="user"/>-->
     <!--</typeAliases>-->
 
     <!--<typeAliases>-->

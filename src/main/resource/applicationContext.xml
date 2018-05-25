@@ -18,7 +18,7 @@
         <property name="password" value="${db.password}"/>
     </bean>
 
-    <bean id="guomiaomiao" class="com.guomiaomiao.pojo.User">
+    <bean id="guomiaomiao" class="com.guomiaomiao.learning.pojo.User">
         <property name="id" value="1"/>
         <property name="name" value="guomiaomiao"/>
         <property name="password" value="111"/>

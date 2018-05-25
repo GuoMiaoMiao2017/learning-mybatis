@@ -1,4 +1,4 @@
-package com.guomiaomiao.pojo;
+package com.guomiaomiao.learning.pojo;
 
 /**
  * Created by 15295 on 2018/5/24.

@@ -1,4 +1,4 @@
-package com.guomiaomiao.loggingAspect;
+package com.guomiaomiao.learning.loggingAspect;
 
 
 import org.aspectj.lang.annotation.*;
@@ -10,19 +10,19 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class Logging {
-    @Before("execution(* com.guomiaomiao.service.impl.UserServiceImpl.*(..))")
+    @Before("execution(* com.guomiaomiao.learning.service.impl.UserServiceImpl.*(..))")
     public void before() {
         System.out.println("111111111111");
     }
-    @After("execution(* com.guomiaomiao.service.impl.UserServiceImpl.*(..))")
+    @After("execution(* com.guomiaomiao.learning.service.impl.UserServiceImpl.*(..))")
     public void after() {
         System.out.println("222222222222");
     }
-    @AfterReturning("execution(* com.guomiaomiao.service.impl.UserServiceImpl.*(..))")
+    @AfterReturning("execution(* com.guomiaomiao.learning.service.impl.UserServiceImpl.*(..))")
     public void afterReturning() {
         System.out.println("333333333333");
     }
-    @AfterThrowing("execution(* com.guomiaomiao.service.impl.UserServiceImpl.*(..))")
+    @AfterThrowing("execution(* com.guomiaomiao.learning.service.impl.UserServiceImpl.*(..))")
     public void afterThrowing() {
         System.out.println("444444444444");
     }

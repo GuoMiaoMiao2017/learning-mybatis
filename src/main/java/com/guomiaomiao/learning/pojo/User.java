@@ -1,4 +1,4 @@
-package com.guomiaomiao.pojo;
+package com.guomiaomiao.learning.pojo;
 
 public class User {
     private Integer id;

@@ -1,8 +1,8 @@
-package com.guomiaomiao;
+package com.guomiaomiao.learning;
 
-import com.guomiaomiao.dao.UserMapper;
-import com.guomiaomiao.pojo.User;
-import com.guomiaomiao.service.IUserService;
+import com.guomiaomiao.learning.dao.UserMapper;
+import com.guomiaomiao.learning.service.IUserService;
+import com.guomiaomiao.learning.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -84,10 +84,10 @@ public class Main {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
         SqlSession sqlSession = sqlSessionFactory.openSession();
-//        User user = sqlSession.selectOne("com.guomiaomiao.dao.UserMapper.getUser", 1);
+//        User user = sqlSession.selectOne("UserMapper.getUser", 1);
 
-//        List<User> list = sqlSession.selectList("com.guomiaomiao.dao.UserMapper.selectUserByName", "小");
-        List<User> list = sqlSession.selectList("com.guomiaomiao.dao.UserMapper.selectUserByName", "%小%");
+//        List<User> list = sqlSession.selectList("UserMapper.selectUserByName", "小");
+        List<User> list = sqlSession.selectList("UserMapper.selectUserByName", "%小%");
         Iterator<User> iterator = list.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
