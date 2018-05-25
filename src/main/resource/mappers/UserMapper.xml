@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间，对sql进行分类话管理-->
+<mapper namespace="com.guomiaomiao.dao.UserMapper">
+    <select id="getUser" parameterType="java.lang.Integer" resultType="com.guomiaomiao.pojo.User">
+        select id, name, password, sex, is_vip as isVip from user where id = #{id}
+    </select>
+    <select id="selectUserByName" parameterType="string" resultType="com.guomiaomiao.pojo.User">
+--         select * from user where name LIKE '%${value}%'
+--   只需写mapper接口，不需写实现，用mapper.xml实现时需要字段一一对应，
+--   select时当数据库中的字段跟pojo中的属性名称不一样时，可以写为A as B,A为sql中的字段，B为pojo中的属性
+        select id, name, password, sex, is_vip as isVip from user where name LIKE #{name}
+    </select>
+    <insert id="insertUser" parameterType="com.guomiaomiao.pojo.User">
+-- 当insert时insert into 后面写的是需插入sql中的字段，value后面是pojo中的get后的属性(如getValue,那么这里就可以写为#{value}),注意不是成员属性值
+        insert into user(name, password, sex, is_vip) value(#{name}, #{password}, #{sex}, #{vip})
+        <!--<selectKey keyProperty="id" resultType="java.lang.Integer" order="AFTER">-->
+            <!--SELECT LAST_INSERT_ID()-->
+        <!--</selectKey>-->
+    </insert>
+    <delete id="deleteUserById" parameterType="java.lang.Integer">
+        delete from user where id = #{id}
+    </delete>
+
+    <update id="updateUser" parameterType="com.guomiaomiao.pojo.User">
+        update user set name = #{name}, password = #{password}, sex = #{sex}, is_vip = #{vip}
+        where id = #{id}
+    </update>
+</mapper>
